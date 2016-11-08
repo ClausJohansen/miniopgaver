@@ -16,12 +16,14 @@ namespace MiniOpgaver
             // Opgave4();
             // Opgave5();
             // Opgave6();
-            Opgave7();
+            // Opgave7();
+            Opgave8();
 
             Console.ReadKey();
         }
 
         /// <summary>
+        /// 1.01
         /// Create a program (in C#) to print Hello on screen and then print your name (in a separate line). 
         /// </summary>
         static void Opgave1()
@@ -31,6 +33,7 @@ namespace MiniOpgaver
         }
 
         /// <summary>
+        /// 1.02
         /// Write a C# program to print the result of adding 12 and 13 on screen. 
         /// </summary>
         static void Opgave2()
@@ -39,6 +42,7 @@ namespace MiniOpgaver
         }
 
         /// <summary>
+        /// 1.03
         /// Write a C# program to print the result of dividing 24 into 5 on screen. 
         /// </summary>
         static void Opgave3()
@@ -50,6 +54,7 @@ namespace MiniOpgaver
         }
 
         /// <summary>
+        /// 1.04
         /// Create a C# program to print the result of the following operations: 
         /// • -1 + 3 * 5 
         /// • (24+5) % 7 
@@ -65,6 +70,7 @@ namespace MiniOpgaver
         }
 
         /// <summary>
+        /// 1.05
         /// Write a C# program to print the result of multiplying two numbers which will entered by the user.
         /// </summary>
         static void Opgave5()
@@ -89,6 +95,7 @@ namespace MiniOpgaver
         }
 
         /// <summary>
+        /// 1.06
         /// Write a C# program to ask the user for three numbers and display their multiplication.
         /// </summary>
         static void Opgave6()
@@ -118,6 +125,7 @@ namespace MiniOpgaver
         }
 
         /// <summary>
+        /// 1.07
         /// Write a C# program to print on screen the result of adding, subtracting, multiplying and dividing two numbers typed by the user.
         /// The remainder of the division must be displayed, too. 
         /// </summary>
@@ -140,6 +148,34 @@ namespace MiniOpgaver
                 Console.WriteLine("{0} x {1} = {2}", number1, number2, number1 * number2);
                 Console.WriteLine("{0} / {1} = {2}", number1, number2, number1 / number2);
                 Console.WriteLine("{0} mod {1} = {2}", number1, number2, number1 % number2);
+            }
+            catch
+            {
+                Console.WriteLine("Noget gik galt. Indtast venligst kun tal.");
+            }
+        }
+
+        /// <summary>
+        /// 1.08
+        /// Write a C# program to ask the user for a number and display its multiplication table, like this: 
+        /// </summary>
+        static void Opgave8()
+        {
+            int multiplicationBase;
+            int tableSize;
+
+            try
+            {
+                Console.Write("Which number would you like multiplacation table for: ");
+                multiplicationBase = int.Parse(Console.ReadLine());
+
+                Console.Write("Table size: ");
+                tableSize = int.Parse(Console.ReadLine());
+
+                for(int i = 1; i <= tableSize; i++)
+                {
+                    Console.WriteLine("{0} x {1} = {2}", multiplicationBase, i, multiplicationBase * i);
+                }
             }
             catch
             {
