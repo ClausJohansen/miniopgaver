@@ -13,7 +13,8 @@ namespace MiniOpgaver
             // Opgave1();
             // Opgave2();
             // Opgave3();
-            Opgave4();
+            // Opgave4();
+            Opgave5();
 
             Console.ReadKey();
         }
@@ -32,7 +33,6 @@ namespace MiniOpgaver
         /// </summary>
         static void Opgave2()
         {
-            int result = 12 + 13;
             Console.WriteLine(12 + 13);
         }
 
@@ -60,6 +60,30 @@ namespace MiniOpgaver
             Console.WriteLine((24 + 5) % 7);
             Console.WriteLine(15 + -4 * 6 / 11);
             Console.WriteLine(2 + 10 / 6 * 1 - 7 % 2);
+        }
+
+        /// <summary>
+        /// Write a C# program to print the result of multiplying two numbers which will entered by the user.
+        /// </summary>
+        static void Opgave5()
+        {
+            try
+            {
+                int factor1;
+                int factor2;
+
+                Console.Write("Indtast første nummer: ");
+                factor1 = int.Parse(Console.ReadLine());
+
+                Console.Write("Indtast andet nummer: ");
+                factor2 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine(factor1 + " x " + factor2 + " = " + (factor1 * factor2));
+            }
+            catch
+            {
+                Console.WriteLine("Noget gik galt. Indtast venligst kun tal.");
+            }
         }
     }
 }
