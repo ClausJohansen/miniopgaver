@@ -17,7 +17,8 @@ namespace MiniOpgaver
             // Opgave5();
             // Opgave6();
             // Opgave7();
-            Opgave8();
+            // Opgave8();
+            Opgave9();
 
             Console.ReadKey();
         }
@@ -180,6 +181,30 @@ namespace MiniOpgaver
             catch
             {
                 Console.WriteLine("Noget gik galt. Indtast venligst kun tal.");
+            }
+        }
+
+        /// <summary>
+        /// 1.09
+        /// Write a C# program to calculate and display the average of four numbers entered by the user. 
+        /// </summary>
+        static void Opgave9()
+        {
+            int[] numbers = new int[4];
+
+            try
+            {
+                for(int i = 0; i < numbers.Length; i++)
+                {
+                    Console.WriteLine("Enter number {0}", i + 1);
+                    numbers[i] = int.Parse(Console.ReadLine());
+                }
+
+                Console.WriteLine("Average = {0}", numbers.Average()); // Or sum of all numbers divided by 4, or divided by the size of the array.
+            }
+            catch
+            {
+                Console.WriteLine("Something went wrong. Please only enter numbers.");
             }
         }
     }
