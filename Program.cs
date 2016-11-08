@@ -18,7 +18,8 @@ namespace MiniOpgaver
             // Opgave6();
             // Opgave7();
             // Opgave8();
-            Opgave9();
+            // Opgave9();
+            Opgave10();
 
             Console.ReadKey();
         }
@@ -206,6 +207,26 @@ namespace MiniOpgaver
             {
                 Console.WriteLine("Something went wrong. Please only enter numbers.");
             }
+        }
+
+        /// <summary>
+        /// Write a C# program to ask the user for three numbers (a, b, c) and display the result of (a+b)·c and the result of a·c + b·c 
+        /// </summary>
+        static void Opgave10()
+        {
+            int a, b, c;
+
+            Console.Write("Enter number \"a\": ");
+            a = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter number \"b\": ");
+            b = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter number \"c\": ");
+            c = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("(a + b) x c = {0}", (a + b) * c);
+            Console.WriteLine("a x c + b x c = {0}", a * c + b * c);
         }
     }
 }
