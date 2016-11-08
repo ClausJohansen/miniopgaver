@@ -15,7 +15,8 @@ namespace MiniOpgaver
             // Opgave3();
             // Opgave4();
             // Opgave5();
-            Opgave6();
+            // Opgave6();
+            Opgave7();
 
             Console.ReadKey();
         }
@@ -68,11 +69,11 @@ namespace MiniOpgaver
         /// </summary>
         static void Opgave5()
         {
+            int factor1;
+            int factor2;
+
             try
             {
-                int factor1;
-                int factor2;
-
                 Console.Write("Indtast første nummer: ");
                 factor1 = int.Parse(Console.ReadLine());
 
@@ -88,14 +89,7 @@ namespace MiniOpgaver
         }
 
         /// <summary>
-        /// Write a C# program to ask the user for three numbers and display their multiplication. The first line must be a comment with your name and surname. It MUST look as follows: 
-        ///
-        /// Enter the first number to multiply 
-        /// 12 
-        /// Enter the second number to multiply 
-        /// 23 
-        /// Enter the third number to multiply 
-        /// 2 
+        /// Write a C# program to ask the user for three numbers and display their multiplication.
         /// </summary>
         static void Opgave6()
         {
@@ -115,7 +109,37 @@ namespace MiniOpgaver
 
                 result = factor1 * factor2 * factor3;
 
-                Console.WriteLine(String.Format("{0} x {1} x {2} = {3}", factor1, factor2, factor3, result));
+                Console.WriteLine("{0} x {1} x {2} = {3}", factor1, factor2, factor3, result);
+            }
+            catch
+            {
+                Console.WriteLine("Noget gik galt. Indtast venligst kun tal.");
+            }
+        }
+
+        /// <summary>
+        /// Write a C# program to print on screen the result of adding, subtracting, multiplying and dividing two numbers typed by the user.
+        /// The remainder of the division must be displayed, too. 
+        /// </summary>
+        /// 
+        static void Opgave7()
+        {
+            int number1;
+            int number2;
+
+            try
+            {
+                Console.Write("Enter a number: ");
+                number1 = int.Parse(Console.ReadLine());
+
+                Console.Write("Enter another number: ");
+                number2 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("{0} + {1} = {2}", number1, number2, number1 + number2);
+                Console.WriteLine("{0} - {1} = {2}", number1, number2, number1 - number2);
+                Console.WriteLine("{0} x {1} = {2}", number1, number2, number1 * number2);
+                Console.WriteLine("{0} / {1} = {2}", number1, number2, number1 / number2);
+                Console.WriteLine("{0} mod {1} = {2}", number1, number2, number1 % number2);
             }
             catch
             {
