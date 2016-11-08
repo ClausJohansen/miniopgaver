@@ -40,7 +40,9 @@ namespace MiniOpgaver
         /// </summary>
         static void Opgave3()
         {
-            double result = 24 / 5;
+            float dividend = 24;
+            float devisor = 5;
+            float result = dividend / devisor;
             Console.WriteLine(result);
         }
     }
