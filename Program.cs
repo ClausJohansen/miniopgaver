@@ -14,7 +14,8 @@ namespace MiniOpgaver
             // Opgave2();
             // Opgave3();
             // Opgave4();
-            Opgave5();
+            // Opgave5();
+            Opgave6();
 
             Console.ReadKey();
         }
@@ -79,6 +80,42 @@ namespace MiniOpgaver
                 factor2 = int.Parse(Console.ReadLine());
 
                 Console.WriteLine(factor1 + " x " + factor2 + " = " + (factor1 * factor2));
+            }
+            catch
+            {
+                Console.WriteLine("Noget gik galt. Indtast venligst kun tal.");
+            }
+        }
+
+        /// <summary>
+        /// Write a C# program to ask the user for three numbers and display their multiplication. The first line must be a comment with your name and surname. It MUST look as follows: 
+        ///
+        /// Enter the first number to multiply 
+        /// 12 
+        /// Enter the second number to multiply 
+        /// 23 
+        /// Enter the third number to multiply 
+        /// 2 
+        /// </summary>
+        static void Opgave6()
+        {
+            try
+            {
+                int factor1, factor2, factor3;
+                int result;
+
+                Console.WriteLine("Enter the first number to multiply");
+                factor1 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter the second to multiply");
+                factor2 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter the third number to multiply");
+                factor3 = int.Parse(Console.ReadLine());
+
+                result = factor1 * factor2 * factor3;
+
+                Console.WriteLine(String.Format("{0} x {1} x {2} = {3}", factor1, factor2, factor3, result));
             }
             catch
             {
