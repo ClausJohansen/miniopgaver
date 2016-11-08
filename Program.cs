@@ -19,7 +19,8 @@ namespace MiniOpgaver
             // Opgave7();
             // Opgave8();
             // Opgave9();
-            Opgave10();
+            // Opgave10();
+            Opgave11();
 
             Console.ReadKey();
         }
@@ -216,17 +217,45 @@ namespace MiniOpgaver
         {
             int a, b, c;
 
-            Console.Write("Enter number \"a\": ");
-            a = int.Parse(Console.ReadLine());
+            try
+            {
+                Console.Write("Enter number \"a\": ");
+                a = int.Parse(Console.ReadLine());
 
-            Console.Write("Enter number \"b\": ");
-            b = int.Parse(Console.ReadLine());
+                Console.Write("Enter number \"b\": ");
+                b = int.Parse(Console.ReadLine());
 
-            Console.Write("Enter number \"c\": ");
-            c = int.Parse(Console.ReadLine());
+                Console.Write("Enter number \"c\": ");
+                c = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("(a + b) x c = {0}", (a + b) * c);
-            Console.WriteLine("a x c + b x c = {0}", a * c + b * c);
+                Console.WriteLine("(a + b) x c = {0}", (a + b) * c);
+                Console.WriteLine("a x c + b x c = {0}", a * c + b * c);
+            }
+            catch
+            {
+                Console.WriteLine("Something went wrong. Please only enter numbers.");
+            }
         }
+
+        /// <summary>
+        /// Write a C# program to ask the user for his age (20, for instance) and answer something as "You look younger than 20" (instead of 20, you should display the age that has been entered).
+        /// </summary>
+        static void Opgave11()
+        {
+            int age;
+
+            try
+            {
+                Console.WriteLine("Please enter your age: ");
+                age = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("You look younger than {0}", age);
+            }
+            catch
+            {
+                Console.WriteLine("Something went wrong. Please only enter numbers.");
+            }
+        }
+
     }
 }
